@@ -95,7 +95,7 @@ require "config-default.php";
 include "config.php";
 $folder = "photos";
 if (!empty($_GET['dir'])) {
-        $folder .= '/' . urldecode($_GET['dir']);
+        $folder .= '/' . urldecode($_REQUEST['dir']);
 }
 
 $content = array();
