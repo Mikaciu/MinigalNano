@@ -94,9 +94,11 @@ function diff($old, $new) {
 require "config-default.php";
 include "config.php";
 $folder = "photos";
+/* does not work because file list is cached
 if (!empty($_GET['dir'])) {
         $folder .= '/' . urldecode($_REQUEST['dir']);
 }
+*/
 
 $content = array();
 $content = listFiles($content, $folder, $SkipExts, $SkipObjects);
