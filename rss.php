@@ -94,6 +94,9 @@ function diff($old, $new) {
 require "config-default.php";
 include "config.php";
 $folder = "photos";
+if (!empty($_GET['dir'])) {
+        $folder .= '/' . urldecode($_GET['dir']);
+}
 
 $content = array();
 $content = listFiles($content, $folder, $SkipExts, $SkipObjects);
